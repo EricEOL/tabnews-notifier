@@ -19,7 +19,17 @@
 }
 
 .form {
-  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form .formContainer {
+  display: flex;
+}
+
+.telegramForm, .tabnewsForm {
+  padding: 20px;
 }
 
 .form strong {
@@ -47,4 +57,13 @@
 
 .form div input:focus {
   border-bottom: 2px solid green;
+}
+
+.form button {
+  width: 300px;
+  height: 25px;
+  background: lightgray;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
 }

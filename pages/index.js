@@ -7,30 +7,33 @@ export default function Home() {
       <section className={styles.section}>
         <div className={styles.container}>
           <form className={styles.form}>
-            <strong>Telegram</strong>
-            <div>
-              <label>Bot Key</label>
-              <input type="text" placeholder="bot5723123438:AEEGSptRjacy_ZIojCrRjdaUUuChFM-lgb7kA" />
+            <div className={styles.formContainer}>
+              <div className={styles.telegramForm}>
+                <strong>Telegram</strong>
+                <div>
+                  <label>Bot Key</label>
+                  <input type="text" placeholder="bot5723123438:AEEGSptRjacy_ZIojCrRjdaUUuChFM-lgb7kA" />
+                </div>
+                <div>
+                  <label>Chat id</label>
+                  <input type="text" placeholder="@elopesnotificatabnews" />
+                </div>
+              </div>
+              <div className={styles.tabnewsForm}>
+                <strong>Tabnews</strong>
+                <div>
+                  <label>Username</label>
+                  <input type="text" placeholder="elopes" />
+                </div>
+                <div>
+                  <label>Post Slug</label>
+                  <input type="text" placeholder="notificador-tabnews-no-telegram" />
+                </div>
+              </div>
             </div>
-            <div>
-              <label>Chat id</label>
-              <input type="text" placeholder="@elopesnotificatabnews" />
-            </div>
-          </form>
-
-          <form className={styles.form}>
-            <strong>Tabnews</strong>
-            <div>
-              <label>Username</label>
-              <input type="text" placeholder="elopes" />
-            </div>
-            <div>
-              <label>Post Slug</label>
-              <input type="text" placeholder="notificador-tabnews-no-telegram" />
-            </div>
+            <button type="submit">Eu quero ser notificado!</button>
           </form>
         </div>
-        <button>Eu quero ser notificado!</button>
       </section>
     </main>
   )
