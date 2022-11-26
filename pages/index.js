@@ -1,7 +1,11 @@
 import Head from 'next/head'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const [] = useState(null);
+
   return (
     <main className={styles.main}>
       <section className={styles.section}>
