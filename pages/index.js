@@ -30,6 +30,9 @@ export default function Home() {
       // REQUISIÇÃO PARA O ENDPOINT DO TELEGRAM
       localStorage.setItem('tabnews-post-monitor', JSON.stringify(data));
       console.log("aqui né")
+
+      sendNotification();
+
       setMessage(SUCCESS_MESSAGE);
       return;
     } else {
@@ -38,6 +41,11 @@ export default function Home() {
       setMessage(ERROR_MESSAGE);
     }
 
+  }
+
+  function sendNotification() {
+    let postList = JSON.parse(localStorage.getItem('tabnews-post-monitor'));
+    console.log(postList.username);
   }
 
   function verifyContents(object) {
@@ -91,7 +99,11 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.monitoredPostSection}>
-        
+        <div className={styles.card}>
+          <strong className={styles.cardIcon}>x</strong>
+          <p>aishsaodihdsaipoasdhoiadshoiads</p>
+          <span>Chat id</span>
+        </div>
       </section>
     </main>
   )
